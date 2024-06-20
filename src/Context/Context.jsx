@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useReducer, useState } from "reac
 import { reducer } from "../reducers/reducer";
 
 const ManyStates = createContext();
-const lsFavs = JSON.parse(localStorage.getItem("favs"))
+const lsFavs = JSON.parse(localStorage.getItem("favs"))  || [];
 
 
 const initialState = {
@@ -14,13 +14,16 @@ const initialState = {
 
 const Context = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [favs, setFavs] = useState([])
-  console.log(favs);
+  const [favs, setFavs] = useState(lsFavs)
 
+  
   useEffect(()=>{
-    localStorage.getItem("favs", JSON.stringify(favs))
+    localStorage.setItem("favs", JSON.stringify(favs))
+    
   }, [favs])
 
+
+  console.log(favs);
   const url = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
     axios(url)

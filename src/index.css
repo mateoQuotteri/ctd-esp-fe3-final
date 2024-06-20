@@ -76,9 +76,7 @@ form{
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
+  padding: 0.5rem 0.5rem 0 0.5rem;}
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
@@ -134,15 +132,16 @@ tr:nth-child(even) {
 .card-dark{
   color: white;
   background-color: #000;
-  border: wheat;
+  border: 2px solid white;
   font-weight: bold;
+  
 }
 
 
 .card-light{
   color: black;
   background-color: white;
-  border: black;
+  border: 2px solid black;
   font-weight: bold;
 }
 

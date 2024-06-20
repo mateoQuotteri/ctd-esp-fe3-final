@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main className={state.theme} >
       <h1>Home</h1>
-      <div  className={state.theme}>
+      <div  className={`${ "card-grid "+ state.theme }`}>
       {state.data.map(user => (
           <Card key={user.id} user={user} />
         ))}
