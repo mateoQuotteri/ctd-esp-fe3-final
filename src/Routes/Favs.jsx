@@ -7,14 +7,12 @@ let favsStorage =   JSON.parse(localStorage.getItem("favs"))
 
 
 const Favs = () => {
-
-  useEffect(()=>{
-    favsStorage.shift()
-  }, [])
+  const { state } = useManyStates();
+ 
   return (
     <>
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
+      <div className={`${ "card-grid "+ state.theme }`}>
         <p>Tus dentistas favoritos</p>
          {favsStorage.map(user => (
           <Card key={user.id} user={user} />
