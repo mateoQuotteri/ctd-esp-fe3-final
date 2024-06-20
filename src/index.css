@@ -120,3 +120,40 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.card-dark{
+  color: white;
+  background-color: #000;
+  border: wheat;
+  font-weight: bold;
+}
+
+
+.card-light{
+  color: black;
+  background-color: white;
+  border: black;
+  font-weight: bold;
+}
+
+.letter-dark{
+  color: white;
+  font-weight: bold;
+
+}
+
+.letter-light{
+  color: black;
+  font-weight: bold;
+
+}
