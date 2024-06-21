@@ -23,7 +23,6 @@ const Context = ({ children }) => {
   }, [favs])
 
 
-  console.log(favs);
   const url = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
     axios(url)

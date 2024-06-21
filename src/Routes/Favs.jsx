@@ -8,12 +8,14 @@ let favsStorage =   JSON.parse(localStorage.getItem("favs"))
 
 const Favs = () => {
   const { state } = useManyStates();
+  const randomNum = Math.random();
+
+  console.log("favs sto " + favsStorage );
  
   return (
     <>
-      <h1>Dentists Favs</h1>
       <div className={`${ "card-grid "+ state.theme }`}>
-        <p>Tus dentistas favoritos</p>
+        <p className={`${ "letter-"+ state.theme }`}>Tus dentistas favoritos</p>
          {favsStorage.map(user => (
           <Card key={user.id} user={user} />
         ))}
